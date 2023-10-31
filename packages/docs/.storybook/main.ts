@@ -25,5 +25,11 @@ const config: StorybookConfig = {
   docs: {
     autodocs: true,
   },
+  viteFinal: (config, {configType}) => {
+    if(configType === 'production'){
+      config.base = '/05-Danielbpc-DesignSystem/'
+    }
+    return config
+  }
 };
 export default config;
